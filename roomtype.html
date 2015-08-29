@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/datepicker.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/material_theme.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/smoothscroll.js"></script>
+	</head>
+	<body onresize="resize()">
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// Stick the #nav to the top of the window
+				//alert("Welcome to my page!!!"); 
+				//alert(navHomeY); 
+			    var nav = $('#tab');
+			    //var top = $('#top-menu');
+			    var navHomeY = nav.offset().top;
+			    //alert(navHomeY); 
+			    navHomeY+=160;
+			    //alert(navHomeY); 
+			    var elem = document.getElementById('tab');
+			    elem.style.top  = navHomeY + 'px';	
+
+
+
+			   
+			    var nav = $('#common-bg');
+			    var top = $('#top-menu');
+			    var navHomeY = nav.offset().top;
+			    /* alert(navHomeY); */
+			    var isFixed = false;
+			    var $w = $(window);
+			    $w.scroll(function() {
+			        var scrollTop = $w.scrollTop();
+			        var shouldBeFixed = scrollTop > navHomeY;
+			        if (shouldBeFixed && !isFixed) {
+			        	/* alert("Menu Show top page!!!"); */
+			        	//alert("Menu Show top page!!!");
+			            top.css({
+			            	display:'block',
+			                position: 'fixed',
+			                top: 0
+			        
+			            });
+			            isFixed = true; 
+        			}
+        			else if (!shouldBeFixed && isFixed)
+        			{
+        				//alert("Default Menu!!!"); 
+            			top.css({
+                			display:'none'
+            			});
+            			isFixed = false;
+        			}
+    			});
+
+			    $( "div.blog-button" ).mouseover(function() {
+			    	$( this ).find( "img" ).attr("src","img/bee1.png");
+			  	})
+			  	.mouseout(function() {		
+			  		$( this ).find( "img" ).attr("src","img/bee1-bw.png");
+			  	});
+
+
+			});
+			function resize()
+			{
+				//alert("Welcome to my page!!!"); 
+				var elem = document.getElementById('tab');
+				elem.style.top  = 20 + 'vh';
+				var nav = $('#tab');
+			    //var top = $('#top-menu');
+			    var navHomeY = nav.offset().top;
+			    //alert(navHomeY); 
+			    navHomeY+=160;
+			    //alert(navHomeY); 
+			    //var elem = document.getElementById('tab');
+			    elem.style.top  = navHomeY + 'px'; 
+			}
+
+			/* function hover(element) {
+				
+				var img = jQuery(this).children("img");
+    			img.setAttribute('src', 'img/bee1.png');	
+			}
+
+			function unhover(element) {
+
+				var img = jQuery(this).children("img");
+    			img.setAttribute('src', 'img/bee1-bw.png');
+			} */
+
+		</script>
+		<header class="content">
+			<div id="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-9 menu-top no-padding">
+							<nav>
+								<ul>
+									<li><a href="index.html">home</a></li>
+									<li><a id="menu-active" href="#rooms" class="smoothScroll">rooms</a></li>
+									<li><a href="#booking" class="smoothScroll">booking</a></li>
+									<li><a href="gallery.html">gallery</a></li>
+									<li><a href="about_us.html">about us</a></li>
+									<li><a href="contact_us.html">contact us</a></li>
+									<li><a href="blog.html">blog<img class="bee-top-menu" src="img/bee1.png" /></a></li> 
+								</ul>
+							</nav>
+						</div>
+						<div class="col-lg-3 no-padding">
+							<div class="book-button">
+								<a href="#booking" class="smoothScroll">BOOKING</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tab">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-xs-12">
+						<div class="logo">
+							<img src="img/logo1.png" />
+						</div>
+					</div>
+					<div class="button-group">
+						<div class="head-button">
+							<a href="#common-bg" class="smoothScroll">DETAILS</a>
+						</div>
+						<div class="book">
+							<a href="#booking" class="smoothScroll">BOOKING</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="common-bg" id="common-bg">
+			<div class="container no-padding" style="background-color: #f8e312;" id="rooms">
+				<div class="col-lg-12 col-xs-12 no-padding">
+					<div class="col-lg-8 col-xs-12 no-padding room-pic-type">
+						<img src="img/room/room1.jpg" />
+					</div>
+					<div class="col-lg-4 col-xs-12 no-padding room-text-box">
+						<div class="text-box-right">
+							<h1>Room Type1</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur 
+								adipiscing elit Ut placerat rhoncus magna, 
+								ac laoreet augue lacinia sit amet Mauris 
+								viverra faucibus lectus faucibus varius 
+								Phasellus sodales a orci egestas elementum</p>
+							<div class="blog-button l">
+								<a href="">MORE<img class="bee-top-menu" src="img/bee1.png" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 no-padding">
+					<div class="col-lg-4 no-padding room-text-box">
+						<div class="text-box-right">
+							<h1>Room Type2</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur 
+								adipiscing elit Ut placerat rhoncus magna, 
+								ac laoreet augue lacinia sit amet Mauris 
+								viverra faucibus lectus faucibus varius 
+								Phasellus sodales a orci egestas elementum</p>
+							<div style="margin-top:20px" class="blog-button l">
+								<a href="#">MORE<img style="left:2px" class="bee-top-menu" src="img/bee1.png" /></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-8 no-padding room-pic-type gray">
+						<img src="img/room/room2.jpg" />
+					</div>
+				</div>
+				<div class="col-lg-12 no-padding">
+					<div class="col-lg-8 no-padding room-pic-type gray">
+						<img src="img/room/room3.jpg" />
+					</div>
+					<div class="col-lg-4 no-padding room-text-box">
+						<div class="text-box-right">
+							<h1>Room Type3</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur 
+								adipiscing elit Ut placerat rhoncus magna, 
+								ac laoreet augue lacinia sit amet Mauris 
+								viverra faucibus lectus faucibus varius 
+								Phasellus sodales a orci egestas elementum</p>
+							<div style="margin-top:20px" class="blog-button l">
+								<a href="#">MORE<img style="left:2px" class="bee-top-menu" src="img/bee1.png" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 no-padding">
+					<div class="col-lg-4 no-padding room-text-box">
+						<div class="text-box-right">
+							<h1>Room Type4</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur 
+								adipiscing elit Ut placerat rhoncus magna, 
+								ac laoreet augue lacinia sit amet Mauris 
+								viverra faucibus lectus faucibus varius 
+								Phasellus sodales a orci egestas elementum</p>
+							<div style="margin-top:20px" class="blog-button l">
+								<a href="#">MORE<img style="left:2px" class="bee-top-menu" src="img/bee1.png" /></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8 no-padding room-pic-type gray">
+						<img src="img/room/room4.jpg" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="booking" id="booking">
+			<div class="container">
+				<div class="row">
+					<div class="booking-text">
+						<h1>BOOKING</h1>
+						<img src="img/bee.png" />
+					</div>
+					<div class="col-ld-12 center form-booking">
+						<div class="box-form">
+							<form>
+								<div class="form-group materail_input_block top-botom">
+									<input type="email" class="form-control materail_input in-out" placeholder="NAME">
+								</div>
+								<div class="form-group materail_input_block top-botom">
+									<input type="email" class="form-control materail_input in-out" placeholder="E-MAIL">
+								</div>
+								<div class="form-group materail_input_block top-botom">
+									<input type="email" class="form-control materail_input in-out" placeholder="PHONE">
+								</div>
+								<div class="form-group materail_input_block top-botom">
+									<input type="email" class="form-control materail_input in-out" placeholder="No of Room(s)">
+								</div>
+								<label class="date top-botom">
+									<p>Date In : </p>
+									<img src="img/date.png">
+									<div class="form-group materail_input_block">
+										<input  type="text" class="form-control materail_input" placeholder=""  id="example1">
+									</div>
+								</label>
+								<div class="clear">
+								<label class="date top-botom">
+									<p>Date Out : </p>
+									<img src="img/date.png">
+									<div class="form-group materail_input_block">
+										<input  type="text" class="form-control materail_input" placeholder=""  id="example2">
+									</div>
+								</label>
+								<div class="clear">
+								<div class="material_checkbox_group top-botom check-box">
+									<input type="checkbox" id="checkbox1" name="checkbox" class="material_checkbox" />
+									<label class="material_label_checkbox bike" for="checkbox1">Need Bike(s)?</label>
+								</div>
+								<div class="clear">
+								<div class="material_checkbox_group top-botom check-box">
+									<input type="checkbox" id="checkbox2" name="checkbox" class="material_checkbox" />
+									<label class="material_label_checkbox bike" for="checkbox2">Need Food?</label>
+								</div>
+								<div class="clear">
+								<div class="submit">
+									<a href="">BOOKING</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<div class="tab-footer">
+			</div> 
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-1">
+					</div>
+					<div class="col-lg-11 foot-area">
+						<div class="foot-social">
+							<ul>
+								<li><a href="#"><img src="img/facebook-b.png" /></a></li>
+								<li><a href="#"><img src="img/instagram-b.png" /></a></li>
+								<li><a href="#"><img src="img/twitter-b.png" /></a></li>
+							</ul>
+						</div>
+						<div class="contact">
+							<div class="l-r">
+								<p class="l">Mail : </p>
+								<p class="r">beehivephuketoldtown@gmail<span class="dot">.</span>com</p>
+							</div>
+							<div class="clear" ></div>
+							<hr />
+							<div class="l-r">
+								<p class="l">Phone : </p>
+								<p class="r">(+66) 080-296-2121</p>
+							</div>
+							<div class="clear" ></div>
+							<hr />
+							<div class="l-r">
+								<p class="l">Fax : </p>
+								<p class="r">(+66) 076-21-19-19</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<section class="power">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="foot-menu">
+							<nav>
+								<ul>
+									<li><a href="index.html">home</a></li>
+									<li><a href="#rooms" class="smoothScroll">rooms</a></li>
+									<li><a href="#booking" class="smoothScroll">booking</a></li>
+									<li><a href="gallery.html">gallery</a></li>
+									<li><a href="about_us.html">about us</a></li>
+									<li><a href="contact_us.html">contact us</a></li>
+									<li><a href="blog.html">blog<img class="bee-top-menu" src="img/bee1.png" /></a></li> 
+								</ul>
+							</nav>
+						</div>
+						<div class="by">
+							<p>Powered by Smart E-Commerce Solutions</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="js/datepicker.js"></script>
+		 <script type="text/javascript">
+            // When the document is ready
+            $(document).ready(function () {
+                //alert("test date picker");
+                $('#example1').datepicker({
+                    format: "dd/mm/yyyy"
+                }); 
+                $('#example2').datepicker({
+                    format: "dd/mm/yyyy"
+                });   
+            
+            });
+        </script>
+	</body>
+</html>
