@@ -4,10 +4,13 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="css/datepicker.css">
+		<link rel="stylesheet" href="css/slicknav.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/material_theme.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.slicknav.min.js"></script>
 		<script type="text/javascript" src="js/smoothscroll.js"></script>
 	</head>
 	<body onresize="resize()">
@@ -93,6 +96,11 @@
 				var img = jQuery(this).children("img");
     			img.setAttribute('src', 'img/bee1-bw.png');
 			} */
+			$(function(){
+				$('#menu').slicknav({
+
+				});
+			});
 
 		</script>
 		<header class="galleries">
@@ -116,6 +124,23 @@
 							<div class="book-button">
 								<a href="#booking" class="smoothScroll">BOOKING</a>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="responsive-menu">
+				<div class="conatiner">
+					<div class="row">
+						<div class="col-xs-12">
+							<ul id="menu">
+								<li><a href="index.html">home</a></li>
+									<li><a href="roomtype.html">rooms</a></li>
+									<li><a href="#booking" class="smoothScroll">booking</a></li>
+									<li><a id="menu-active" href="#gallery" class="smoothScroll">gallery</a></li>
+									<li><a href="about_us.html">about us</a></li>
+									<li><a href="contact_us.html">contact us</a></li>
+									<li><a href="blog.html">blog<img class="bee-top-menu" src="img/bee1.png" /></a></li>  
+							</ul>
 						</div>
 					</div>
 				</div>

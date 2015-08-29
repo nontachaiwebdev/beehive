@@ -725,7 +725,7 @@ div.small{
 	margin-top:20px;
 }
 .about-content p ,h2 {
-	margin-left: 30px;
+	margin-left: 0px;
 	margin-right: 30px;
 }
 
@@ -847,9 +847,34 @@ div.small{
 .gallery-desktop{
 	display: block ;
 }
+.slicknav_menu {
+	display:none;
+}
+#menu{
+	display: none;
+}
+#responsive-menu{
+	display: none;
+}
 @media only screen and (max-device-width: 480px) {
 	header {
 		height:50vh !important; 
+	}
+	#menu {
+		display:none;
+	}
+	.slicknav_menu {
+		display:block;
+		/* width: 100%; */
+		position: fixed;
+		top: 0;
+		left:0;
+		z-index: 15;
+	}
+	.slicknav_btn{
+		    -webkit-border-radius: 0px !important; 
+    		-moz-border-radius: 0px !important;
+    		border-radius: 0px !important; 
 	}
 	#tab{
 		display: none;
