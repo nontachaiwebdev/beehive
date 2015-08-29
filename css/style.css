@@ -751,6 +751,11 @@ div.small{
 }
 .blog {
 	display: block;
+	padding-left: 10px; 
+	padding-right: 10px;
+}
+.blog-style {
+	display: block;
 	width:50%; 
 	padding-left: 10px; 
 	padding-right: 10px;
@@ -793,6 +798,9 @@ div.small{
 	#top-menu{
 		z-index: -10;
 		display:none;
+	}
+	.common-bg{
+		
 	}
 	.menu-top{
 		display:none;
@@ -995,13 +1003,18 @@ div.small{
 		width: 100%;
 		height: auto;
 	}
+	.blog-style{
+		width: 100%;
+		height: auto;
+	}
 	.blog-top-margin{
 		margin-top: 0px;
 	}
 	.blog-content{
 		height: auto;
+		margin-bottom: 5%;
 	}
-	.blog h2{
+	.blog-style h2{
 		margin-top: 2vh;
 	}
 	.about-content{
