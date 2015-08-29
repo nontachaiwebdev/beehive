@@ -694,7 +694,6 @@ div.small{
 }
 
 .about-logo{
-	display: inline-block;
 	height:250px;
 	background-color: #f8e312;
 }
@@ -771,9 +770,9 @@ div.small{
 	margin-top:50px;
 }
 .rooms-position{
-	position:absolute;
-	top:125%;
-	left:16%;
+	position:relative;
+	top:40%;
+	left:17%;
 }
 .facility-position{
 	margin-top:13%;
@@ -796,6 +795,21 @@ div.small{
 }
 .room-content{
 	height: auto;
+}
+.contact-content{
+	height: 450px;
+}
+.about-desktop{
+	display: inline-block;
+}
+.about-mobile{
+	display:none;
+}
+.gallery-mobile{
+	display: none ;
+}
+.gallery-desktop{
+	display: block ;
 }
 @media only screen and (max-device-width: 480px) {
 	header {
@@ -1030,7 +1044,7 @@ div.small{
 		width: 100%;
 	}
 	.gallery-pic-type {
-		position: block;
+		display: block;
 		height:auto;
 	}
 	.gallery-pic-type img{
@@ -1092,13 +1106,6 @@ div.small{
 		width: 100%;
 		margin-top: 0px;
 	}
-	.about-content h2{
-		text-align: center;
-	}
-	.about-button{
-		position: relative;
-		left:25%;
-	}
 	.top-margin{
 		margin-top:5%;
 	}
@@ -1111,22 +1118,16 @@ div.small{
 	.room-desktop{
 		display:none !important;
 	}
-}
-@media (max-height: 480px) and (min-width: 480px) and (max-width: 600px) { 
-    html{
-        -webkit-transform: rotate(-90deg);
-           -moz-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-             -o-transform: rotate(-90deg);
-                transform: rotate(-90deg);
-        -webkit-transform-origin: left top;
-           -moz-transform-origin: left top;
-            -ms-transform-origin: left top;
-             -o-transform-origin: left top;
-                transform-origin: left top;
-        width: 320px; /*this is the iPhone screen width.*/
-        position: absolute;
-        top: 100%;
-        left: 0
-    }
+	.about-desktop{
+		display: none;
+	}
+	.about-mobile{
+		display: inline-block;
+	}
+	.gallery-desktop{
+		display: none ;
+	}
+	.gallery-mobile{
+		display: block ;
+	}
 }
