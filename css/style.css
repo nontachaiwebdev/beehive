@@ -633,7 +633,7 @@ input[type="email"]
 	margin-top: 45px ;
 }
 .room-pic-type{
-	display: block;
+	display: block ;
 	height:400px;
 }
 .room-pic-type img{
@@ -787,6 +787,15 @@ div.small{
 }
 .mobile-display{
 	display:none;
+}
+.room-mobile{
+	display:none; 
+}
+.room-desktop{
+	display:block;
+}
+.room-content{
+	height: auto;
 }
 @media only screen and (max-device-width: 480px) {
 	header {
@@ -1095,6 +1104,12 @@ div.small{
 	}
 	.bottom-margin{
 		margin-bottom: 5%;
+	}
+	.room-mobile{
+		display:block !important;
+	}
+	.room-desktop{
+		display:none !important;
 	}
 }
 @media (max-height: 480px) and (min-width: 480px) and (max-width: 600px) { 
